@@ -70,6 +70,11 @@
        - containerPort: 80
    ```
 
+##当资源紧俏时，例如OOM，kubelet会根据QoS进行驱逐：
+
+Best-Effort，最低优先级，第一个被kill；
+Burstable，第二个被kill;
+Guaranteed，最高优先级，最后kill。除非超过limit或者没有其他低优先级的Pod。
 
 
 ## 二、QoS应用场景
