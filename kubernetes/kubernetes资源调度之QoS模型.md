@@ -35,7 +35,7 @@
 
    当这个 Pod 创建之后，它的 qosClass 字段就会被 Kubernetes 自动设置为 Guaranteed。需要注意的是，当 Pod 仅设置了 limits 没有设置 requests 的时候，Kubernetes 会自动为它设置与 limits 相同的 requests 值，所以，这也属于 Guaranteed 情况。
 
-2. 当pod不满足Guaranteed条件时，pod中至少有一个container设置了request，那么这个pod的QoS就会被列为BestEffort类别，比如以下例子：
+2. 当pod不满足Guaranteed条件时，pod中至少有一个container设置了request，那么这个pod的QoS就会被列为Burstable类别，比如以下例子：
 
    ```
    apiVersion: v1
