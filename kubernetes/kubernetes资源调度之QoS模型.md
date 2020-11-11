@@ -70,7 +70,7 @@
        - containerPort: 80
    ```
 
-##当资源紧俏时，例如OOM，kubelet会根据QoS进行驱逐：
+## 当资源紧俏时，例如OOM，kubelet会根据QoS进行驱逐：
 
 Best-Effort，最低优先级，第一个被kill；
 Burstable，第二个被kill;
